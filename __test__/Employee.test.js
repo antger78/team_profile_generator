@@ -1,7 +1,5 @@
 const Employee = require('../lib/Employee');
 
-// jest.mock('../lib/Employee.js');
-
 test('create an employee object with a name', () =>{
     const employee = new Employee('testEmployee');
     expect(employee.name).toBe('testEmployee');
@@ -22,28 +20,3 @@ test('getRole should return Employee', () =>{
     const employee = new Employee('', '', '');
     expect(employee.getRole()).toBe('Employee');
 });
-
-// test('gets employee name object', () =>{
-//     const employee = new Employee('testEmployee');
-
-//     // expect(employee.getName()).toHaveProperty('name');
-//     expect(employee.getName()).toEqual(expect.stringContaining(employee.name.toString()));
-// });
-
-// test('gets employee ID object', () =>{
-//     const employee = new Employee('testEmployee');
-
-//     expect(employee.getId()).toHaveProperty('id');
-// });
-
-// test('gets employee email object', () =>{
-//     const employee = new Employee('testEmployee');
-
-//     expect(employee.getEmail()).toHaveProperty('email');
-// });
-
-// test('gets employee role object', () =>{
-//     const employee = new Employee('testEmployee');
-
-//     expect(employee.getRole()).toEqual(expect.any(String));
-// });

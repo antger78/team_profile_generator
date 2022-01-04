@@ -1,11 +1,35 @@
 const Intern = require('../lib/Intern');
+const Employee = require('../lib/Employee');
 
-jest.mock('../lib/Intern.js');
+// jest.mock('../lib/Intern.js');
 
-test('create an intern object', () =>{
+test('create an intern object with a name', () =>{
     const intern = new Intern('testEmployee');
     expect(intern.name).toBe('testEmployee');
-    expect(intern.id).toEqual(expect.any(Number));
-    expect(intern.email).toEqual(expect.any(String));
-    expect(intern.school).toEqual(expect.any(String));
+});
+
+test('create an intern object with a ID', () =>{
+    const testID = 1
+    const intern = new Intern('', testID);
+    expect(intern.id).toBe(testID);
+});
+
+test('create an intern object with an email', () =>{
+    const intern = new Intern('', '', 'test@email.com');
+    expect(intern.email).toBe('test@email.com');
+});
+
+test('create an intern object with an github', () =>{
+    const intern = new Intern('', '', '', 'testschool');
+    expect(intern.school).toBe('testschool');
+});
+
+test('getRole should return Employee', () =>{
+    const intern = new Intern('', '', '', '');
+    expect(intern.getRole()).toBe('Intern');
+});
+
+test('getSchool should return testschool', () =>{
+    const intern = new Intern('', '', '', 'testschool');
+    expect(intern.getSchool()).toBe("This Employee went to testschool");
 });
