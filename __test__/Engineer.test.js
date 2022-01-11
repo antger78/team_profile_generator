@@ -29,5 +29,5 @@ test('getRole should return Employee', () =>{
 
 test('getGithub should return testgithub', () =>{
     const engineer = new Engineer('', '', '', 'testgithub');
-    expect(engineer.getGithub()).toBe("This Employee's Github account is:  testgithub");
+    expect(engineer.getGithub()).toBe("testgithub");
 });

@@ -31,5 +31,5 @@ test('getRole should return Employee', () =>{
 
 test('getSchool should return testschool', () =>{
     const intern = new Intern('', '', '', 'testschool');
-    expect(intern.getSchool()).toBe("This Employee went to testschool");
+    expect(intern.getSchool()).toBe("testschool");
 });

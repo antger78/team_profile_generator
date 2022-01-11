@@ -32,7 +32,7 @@ console.log('Engineer team is:', Engineerteam);
 </div>
 <ul class="list-group list-group-flush">
   <li class="list-group-item">ID: ${teamArray[0].id}</li>
-  <li class="list-group-item">Email: ${teamArray[0].email} </li>
+  <li class="list-group-item">Email: <address><a href="${teamArray[0].email}">${teamArray[0].email}</a></address></li>
   <li class="list-group-item">Office Number: ${teamArray[0].officenumber}</li>
 </ul>
 </div>
@@ -45,8 +45,8 @@ console.log('Engineer team is:', Engineerteam);
   </div>
 <ul class="list-group list-group-flush">
   <li class="list-group-item">ID: ${JSON.stringify(Engineerteam.map(employee =>{ return employee.id})).replace(/[\[\]"]+/g,'')}</li>
-  <li class="list-group-item">Email: ${JSON.stringify(Engineerteam.map(employee =>{ return employee.email})).replace(/[\[\]"]+/g,'')}</li>
-  <li class="list-group-item">Github: ${JSON.stringify(Engineerteam.map(employee =>{ return employee.github})).replace(/[\[\]"]+/g,'')}</li>
+  <li class="list-group-item">Email: <address><a href="${JSON.stringify(Engineerteam.map(employee =>{ return employee.email})).replace(/[\[\]"]+/g,'')}">${JSON.stringify(Engineerteam.map(employee =>{ return employee.email})).replace(/[\[\]"]+/g,'')}</a></address></li>
+  <li class="list-group-item">Github: <address><a href="github.com/${JSON.stringify(Engineerteam.map(employee =>{ return employee.github})).replace(/[\[\]"]+/g,'')}">${JSON.stringify(Engineerteam.map(employee =>{ return employee.github})).replace(/[\[\]"]+/g,'')}</a></address></li>
 </ul>
 </div>
 </div>
@@ -59,7 +59,7 @@ console.log('Engineer team is:', Engineerteam);
   </div>
 <ul class="list-group list-group-flush">
   <li class="list-group-item">ID: ${JSON.stringify(Internteam.map(employee =>{ return employee.id})).replace(/[\[\]"]+/g,'')}</li>
-  <li class="list-group-item">Email: ${JSON.stringify(Internteam.map(employee =>{ return employee.email})).replace(/[\[\]"]+/g,'')}</li>
+  <li class="list-group-item">Email: <address><a href="${JSON.stringify(Internteam.map(employee =>{ return employee.email})).replace(/[\[\]"]+/g,'')}">${JSON.stringify(Internteam.map(employee =>{ return employee.email})).replace(/[\[\]"]+/g,'')}</a></address></li>
   <li class="list-group-item">School: ${JSON.stringify(Internteam.map(employee =>{ return employee.school})).replace(/[\[\]"]+/g,'')}</li>
 </ul>
 </div>
